@@ -80,6 +80,8 @@
       command: docker compose up --build -d
       args:
         chdir: /home/{{ ansible_user }}/task15-git
+      environment:
+        TAG: '{{ docker_image_tag }}'
       when: ansible_facts['distribution'] == 'Ubuntu'
 
     - name: build and start docker-compose services on fedora

@@ -6,7 +6,8 @@
   block:
     - name: clone a github repository on Ubuntu
       git:
-        repo: 'https://github.com/dside33/task15.git'
+        repo: 'git@github.com:dside33/task-16.git'
+        key_file: '/home/side1/.ssh/personal_key'
         dest: /home/{{ ansible_user }}/task15-git
         clone: yes
         update: yes
